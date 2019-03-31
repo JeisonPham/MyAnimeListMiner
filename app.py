@@ -68,12 +68,14 @@ while len(status_error) < 100:
         wks.update_row(spread_index,values=info)
         spread_index += 1
         
+        print(spread_index, end=" ")
         status_error = []
     elif status == 404:
         status_error.append(status)
         print(len(status_error), end=" ")
     elif status == 429:
         mal_index -= 1
+        time.sleep(0.5)
         continue
     print(status)
     time.sleep(1)
