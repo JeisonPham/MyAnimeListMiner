@@ -8,6 +8,8 @@ import json
 import requests
 import time
 
+time.sleep(30)
+
 header = ['Title','type','genre','duration','source','producers','studios','score']
 
 
