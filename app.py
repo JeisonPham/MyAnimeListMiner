@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[6]:
+# In[1]:
 
 
 import json
@@ -11,7 +11,7 @@ import time
 header = ['Title','type','genre','duration','source','producers','studios','score']
 
 
-# In[7]:
+# In[5]:
 
 
 import pygsheets
@@ -22,10 +22,11 @@ gc = pygsheets.authorize(service_file='client_secret.json')
 sh = gc.open('Myanimelist')
 
 wks = sh[0]
+wks.clear()
 wks.insert_rows(0,values=header)
 
 
-# In[16]:
+# In[3]:
 
 
 mal_index = 0
@@ -33,7 +34,7 @@ spread_index = 1
 status_error = []
 
 
-# In[17]:
+# In[4]:
 
 
 while len(status_error) < 100:
