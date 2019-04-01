@@ -38,7 +38,7 @@ status_error = []
 # In[8]:
 
 
-while len(status_error) < 200:
+while len(status_error) < 500:
     mal_index += 1
     url = "https://api.jikan.moe/v3/anime/{}".format(mal_index)
     response = requests.get(url)
