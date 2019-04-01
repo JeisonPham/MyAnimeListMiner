@@ -30,8 +30,8 @@ wks.update_row(1,values=header)
 # In[7]:
 
 
-mal_index = 0
-spread_index = 2
+mal_index = 26358
+spread_index = 9569
 status_error = []
 
 
